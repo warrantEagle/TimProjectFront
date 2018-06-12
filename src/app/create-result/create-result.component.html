@@ -24,9 +24,11 @@
       <input type="date" [(ngModel)]="result.date" placeholder="Date" name="date" class="form-control" id="date">
     </div>
     <div class="form-group">
-      <label for="map">Map:</label>
-      <input type="map" [(ngModel)]="result.map" placeholder="Map" name="map" class="form-control" id="map">
+      <label for="x">Map:</label>
+      <input [(ngModel)]="this.x" placeholder="x" name="x" class="form-control" id="x">
+      <input [(ngModel)]="this.y" placeholder="y" name="y" class="form-control" id="y">
     </div>
+    <button class="btn btn-success" (click)="addPoint()">add point</button>
     <button class="btn btn-success" (click)="create()">Create</button>
   </form>
 </div>

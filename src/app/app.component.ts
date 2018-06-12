@@ -11,8 +11,6 @@ import {Person} from './person';
   providers: [DataService]
 })
 export class AppComponent {
-  title = 'My first AGM project';
-  lat = 51.678418;
-  lng = 7.809007;
+  title = 'Training partner app';
 
 }

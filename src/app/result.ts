@@ -8,5 +8,5 @@ export class Result {
   public kcal: number;
   public time: number;
   public date: Date;
-  public map: Point[];
+  public map: number[][];
 }

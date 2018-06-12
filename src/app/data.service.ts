@@ -14,8 +14,8 @@ const httpOptions = {
 @Injectable()
 export class DataService {
 
-  private resultUrl = '/api/result';
-  private peopleUrl = '/api';
+  private resultUrl = 'http://localhost:8080/api/result';
+  private peopleUrl = 'http://localhost:8080/api';
   constructor(private http: HttpClient) { }
   /**
    * W dalszej częsci pobieranie danych o uzytkownikach

@@ -19,9 +19,23 @@
       <td>{{ res.time }}</td>
       <td>{{ res.loginPerson }}</td>
       <td>{{ res.date }}</td>
-      <td>{{ res.map }}</td>
       <td><button class="btn btn-danger" (click)="delete(res)"> Delete result</button></td>
     </tr>
     </tbody>
+
   </table>
+
+</div>
+<div class="col-md-6">
+  <agm-map [latitude]="lat"
+           [longitude]="lng"
+           [zoom]="zoom">
+          <agm-polyline  *ngFor="let r of results">
+             <agm-polyline-point *ngFor="let p of r.map; let i = index"
+    [latitude]="p[i][0]"
+    [longitude]="p[i][1]">
+              </agm-polyline-point>
+
+          </agm-polyline>
+  </agm-map>
 </div>

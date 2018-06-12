@@ -26,7 +26,7 @@ import { AgmCoreModule } from '@agm/core';
     HttpClientModule,
     FormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'YOUR_KEY'
+      apiKey: 'AIzaSyAO6aMg20saQ5_fziBpjQ7Dohz_f6THMj0'
     })
   ],
   providers: [DataService],

@@ -4,6 +4,7 @@ import {Location} from '@angular/common';
 import {Person} from '../person';
 import {Router} from '@angular/router';
 import {Result} from '../result';
+import {Point} from "../point";
 
 @Component({
   selector: 'app-create-result',
@@ -12,7 +13,18 @@ import {Result} from '../result';
 })
 export class CreateResultComponent  {
 
-  result: Result = new Result();
+  result: Result = {
+    loginPerson: '',
+   length: 0,
+   kcal: 0,
+   time: 0,
+   date: new Date(),
+   map: [[1,2],[1,2]],
+  };
+
+   x: number;
+     y: number;
+
   submitted = false;
   constructor(private router: Router, private dataService: DataService,
               private location: Location) { }
@@ -25,6 +37,9 @@ export class CreateResultComponent  {
 
   }
 
+  addPoint(){
+    this.result.map.push([this.x,this.y])
+  }
   goBack(): void {
     this.location.back();
   }
