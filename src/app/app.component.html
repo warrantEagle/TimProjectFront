@@ -1,19 +1,8 @@
-<div class="container-fluid">
-  <div class="col-md-offset-1">
-    <h1>{{ title }}</h1>
+<!--<a routerLink="/people"> List People</a>
+<a style="margin-left:10px" routerLink="/add">Add Person</a>
+<a style="margin-left:10px" routerLink="/results"> List Results</a>
+<a style="margin-left:10px" routerLink="/addRes">Add Result</a>
+<br/>-->
 
-    <!-- this creates a google map on the page with the given lat/lng from -->
-    <!-- the component as the initial center of the map: -->
-    <agm-map [latitude]="lat" [longitude]="lng">
-      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-    </agm-map>
-  </div>
+<router-outlet></router-outlet>
 
-  <a routerLink="/people"> List People</a>
-  <a style="margin-left:10px" routerLink="/add">Add Person</a>
-  <a style="margin-left:10px" routerLink="/results"> List Results</a>
-  <a style="margin-left:10px" routerLink="/addRes">Add Result</a>
-  <br/>
-
-  <router-outlet></router-outlet>
-</div>
