@@ -6,6 +6,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import {Observable} from 'rxjs';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {stringDistance} from 'codelyzer/util/utils';
+import {LoginData} from './loginData';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json', 'No-Auth': 'True'})
@@ -32,8 +33,8 @@ export class DataService {
     return this.http.get<Person>(this.peopleUrl + '/' + login);
   }
 
-  delete(person: Person) {
-    return this.http.delete(this.peopleUrl + '/' + person.login);
+  delete(login: string) {
+    return this.http.delete(this.peopleUrl + '/' + login);
   }
 
   /**
@@ -52,5 +53,7 @@ export class DataService {
   /**
    * logowanie
    */
-
+  check(loginData: LoginData) {
+    return this.http.get<Person>(this.peopleUrl + '/login/' + loginData.login + '/' + loginData.password );
+  }
 }

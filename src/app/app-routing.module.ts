@@ -5,6 +5,8 @@ import {PersonDetailsComponent} from './person-details/person-details.component'
 import {CreatePersonComponent} from './create-person/create-person.component';
 import {ResultsComponent} from './results/results.component';
 import {CreateResultComponent} from './create-result/create-result.component';
+import {LoginComponent} from './login/login.component';
+
 
 
 
@@ -13,7 +15,8 @@ const routes: Routes = [
   { path: 'results',  component: ResultsComponent },
   { path: 'add', component: CreatePersonComponent },
   { path: 'addRes', component: CreateResultComponent },
-  { path: 'detail/:id', component: PersonDetailsComponent }
+  { path: '', component: LoginComponent }
+
 ];
 
 @NgModule({

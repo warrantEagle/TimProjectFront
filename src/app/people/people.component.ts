@@ -23,7 +23,7 @@ export class PeopleComponent implements OnInit {
     this.getPeople();
   }
   delete(person: Person): void {
-    this.dataService.delete(person)
+    this.dataService.delete(person.login)
       .subscribe( data => {
         this.people = this.people.filter(u => u !== person);
       });
