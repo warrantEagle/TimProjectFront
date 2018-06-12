@@ -1,0 +1,38 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add Person</h2>
+  <form>
+    <div class="form-group">
+      <label for="login">Login:</label>
+      <input type="login" [(ngModel)]="person.login" placeholder="Login" name="login" class="form-control" id="login">
+    </div>
+    <div class="form-group">
+      <label for="name"> Name:</label>
+      <input [(ngModel)]="person.name" placeholder=" Name" name="name" class="form-control" id="name">
+    </div>
+    <div class="form-group">
+      <label for="surname">Surname:</label>
+      <input [(ngModel)]="person.surname" placeholder="SurName" name="surname" class="form-control" id="surname">
+    </div>
+    <div class="form-group">
+      <label for="weight">Weight:</label>
+      <input [(ngModel)]="person.weight" placeholder="Weight" name="weight" class="form-control" id="weight">
+    </div>
+    <div class="form-group">
+      <label for="height">Height:</label>
+      <input [(ngModel)]="person.height" placeholder="Height" name="height" class="form-control" id="height">
+    </div>
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input [(ngModel)]="person.age" placeholder="Age" name="age" class="form-control" id="age">
+    </div>
+    <div class="form-group">
+      <label for="sex">Sex:</label>
+      <input [(ngModel)]="person.sex" placeholder="Sex" name="sex" class="form-control" id="sex">
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input [(ngModel)]="person.password" placeholder="Password" name="password" class="form-control" id="password">
+    </div>
+    <button class="btn btn-success" (click)="create()">Create</button>
+  </form>
+</div>
