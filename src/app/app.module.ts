@@ -11,6 +11,7 @@ import {FormsModule} from '@angular/forms';
 import { ResultsComponent } from './results/results.component';
 import { CreateResultComponent } from './create-result/create-result.component';
 import { AgmCoreModule } from '@agm/core';
+import {LoginComponent} from "./login/login.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { AgmCoreModule } from '@agm/core';
     PeopleComponent,
     CreatePersonComponent,
     ResultsComponent,
-    CreateResultComponent
+    CreateResultComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
