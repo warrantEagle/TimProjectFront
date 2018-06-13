@@ -12,6 +12,9 @@ import { ResultsComponent } from './results/results.component';
 import { CreateResultComponent } from './create-result/create-result.component';
 import { AgmCoreModule } from '@agm/core';
 import {LoginComponent} from "./login/login.component";
+import { HomeComponent } from './home/home.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,8 @@ import {LoginComponent} from "./login/login.component";
     CreatePersonComponent,
     ResultsComponent,
     CreateResultComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

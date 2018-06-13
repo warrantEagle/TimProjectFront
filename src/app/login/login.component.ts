@@ -17,7 +17,7 @@ export class LoginComponent {
     this.dataService.check(this.loginData)
       .subscribe( data => {
         this.router.navigate(['/people']);
-        alert('User created successfully.');
+        alert('Loged in successfully.');
       });
   }
 }
