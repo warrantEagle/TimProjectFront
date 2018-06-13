@@ -1,11 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Result} from './result';
-import {Http} from '@angular/http';
 import {Person} from './person';
-import { ActivatedRoute, Params } from '@angular/router';
-import {Observable} from 'rxjs';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {stringDistance} from 'codelyzer/util/utils';
 import {LoginData} from './loginData';
 
 const httpOptions = {
@@ -15,8 +11,8 @@ const httpOptions = {
 @Injectable()
 export class DataService {
 
-  private resultUrl = '/api/result';
-  private peopleUrl = '/api';
+  private resultUrl = 'http://localhost:8080/api/result';
+  private peopleUrl = 'http://localhost:8080/api';
   constructor(private http: HttpClient) { }
   /**
    * W dalszej częsci pobieranie danych o uzytkownikach
