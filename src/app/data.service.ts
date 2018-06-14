@@ -8,6 +8,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {stringDistance} from 'codelyzer/util/utils';
 import {LoginData} from './loginData';
 import {Point} from './point';
+import {forEach} from '@angular/router/src/utils/collection';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json', 'No-Auth': 'True'})
@@ -55,10 +56,12 @@ export class DataService {
    * logowanie
    */
   check(loginData: LoginData) {
-    return this.http.get<Person>(this.peopleUrl + '/login/' + loginData.login + '/' + loginData.password );
+    return this.http.get<LoginData>(this.peopleUrl + '/login/' + loginData.login + '/' + loginData.password );
   }
 
   createPoints(points: Point[]) {
-    return this.http.post<Result>(this.resultUrl + '/createPoints', points);
+
+    alert('Length: !' + points.length);
+    return this.http.post<Point[]>(this.resultUrl + '/createPoints', points);
   }
 }

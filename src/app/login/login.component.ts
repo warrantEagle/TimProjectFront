@@ -19,7 +19,7 @@ export class LoginComponent {
       .subscribe( data => {/*
         data =*/
         this.router.navigate(['/home']);
-        alert('Loged in successfully.' + data.name);
+        alert('Loged in successfully.');
       });
   }
 }
