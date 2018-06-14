@@ -4,6 +4,8 @@ import {Location} from '@angular/common';
 import {Person} from '../person';
 import {Router} from '@angular/router';
 import {Result} from '../result';
+import {Point} from '../point';
+import {ArrayType} from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-create-result',
@@ -11,18 +13,27 @@ import {Result} from '../result';
   styleUrls: ['./create-result.component.css']
 })
 export class CreateResultComponent  {
+  constructor(private router: Router, private dataService: DataService,
+              private location: Location) { }
+   p1: Point = new Point(1, 1);
+   p2: Point = new Point(2, 2);
+   p3: Point = new Point(3, 3);
+  point: Point[];
 
   result: Result = new Result();
   submitted = false;
-  constructor(private router: Router, private dataService: DataService,
-              private location: Location) { }
+
 
   create(): void {
+    this.point = [this.p1, this.p2, this.p3];
     this.dataService.createResult(this.result)
       .subscribe( data => {
-        alert('Result created successfully.');
+        alert('Result created successfully!');
       });
-
+    this.dataService.createPoints(this.point)
+      .subscribe( data => {
+        alert('Points created successfully!');
+      });
   }
 
   goBack(): void {

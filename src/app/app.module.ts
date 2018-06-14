@@ -12,6 +12,7 @@ import { ResultsComponent } from './results/results.component';
 import { CreateResultComponent } from './create-result/create-result.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HomeComponent } from './home/home.component';
     ResultsComponent,
     CreateResultComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    AdminPageComponent
   ],
   imports: [
     BrowserModule,

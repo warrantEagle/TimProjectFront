@@ -7,6 +7,7 @@ import {Observable} from 'rxjs';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {stringDistance} from 'codelyzer/util/utils';
 import {LoginData} from './loginData';
+import {Point} from './point';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json', 'No-Auth': 'True'})
@@ -47,7 +48,7 @@ export class DataService {
     return this.http.delete(this.resultUrl + '/' + result);
   }
   createResult(result: Result )  {
-    return this.http.post<Result>(this.resultUrl, result);
+    return this.http.post<Result>(this.resultUrl + '/createResult', result);
   }
 
   /**
@@ -55,5 +56,9 @@ export class DataService {
    */
   check(loginData: LoginData) {
     return this.http.get<Person>(this.peopleUrl + '/login/' + loginData.login + '/' + loginData.password );
+  }
+
+  createPoints(points: Point[]) {
+    return this.http.post<Result>(this.resultUrl + '/createPoints', points);
   }
 }

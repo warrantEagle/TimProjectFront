@@ -14,7 +14,7 @@ import { switchMap } from 'rxjs/operators';
 })
 export class PersonDetailsComponent   {
 
-  /*person: Person;
+  person: Person;
   submitted = false;
   constructor(
     private dataService: DataService,
@@ -22,23 +22,23 @@ export class PersonDetailsComponent   {
     private location: Location
   ) {}
   delete(): void {
-    this.dataService.delete(this.person.pesel).then(() => this.goBack());
-  }
+    this.dataService.delete(this.person.login);
+  }/*
   onSubmit(): void {
     this.submitted = true;
     this.dataService.update(this.person);
-  }
-  ngOnInit(): void {
+  }*/
+  /*ngOnInit(): void {
     this.route.params.pipe(
       switchMap(
         (params: Params) =>
           this.dataService.getPerson(+params['pesel'])
     )).subscribe(person => this.person = person);
-  }
+  }*/
 
   goBack(): void {
     this.location.back();
   }
-*/
+
 
 }
