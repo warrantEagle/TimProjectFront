@@ -1,15 +1,13 @@
-<p>
-  homepage works!
-</p>
+<div >
 <div class="container-fluid">
   <div class="col-md-offset-1">
     <h1>
       Welcome to !
     </h1>
-  </div>
-  <a style="margin-left:10px" routerLink="/results"> List Results</a>
+  </div >
+  <a *ngIf="login" style="margin-left:10px" [routerLink]="['/results/', login]"> List Results</a>
   <a style="margin-left:10px" routerLink="/addRes">Add Result</a>
 
   <br/>
 </div>
-<div> <button class="btn btn-primary" (click)="goBack()">Back</button> </div>
+</div>

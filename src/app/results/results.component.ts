@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Result} from '../result';
 import {DataService} from '../data.service';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Params, Router} from '@angular/router';
 import {Person} from '../person';
+import {switchMap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-results',
@@ -11,18 +12,23 @@ import {Person} from '../person';
 })
 export class ResultsComponent implements OnInit {
 
+  login: string;
   results: Result[];
-  constructor(private router: Router, private dataService: DataService) { }
+  constructor(private router: Router, private route: ActivatedRoute, private dataService: DataService) { }
 
-  getResultsByPersonLogin(result: Result) {
-    return this.dataService.getResultsByPersonLogin(result).subscribe( data => {
+  getResultsByPersonLogin(login: string) {
+    return this.dataService.getResultsByPersonLogin(login).subscribe( data => {
       this.results = data;
     });
   }
 
   ngOnInit() {
-    //this.getResultsByPersonLogin(result: Result);
+    this.route.params.subscribe(params => {
+      this.login = params['personLogin'];
+    });
+    this.getResultsByPersonLogin(this.login);
   }
+
 
   delete(result: Result): void {
     this.dataService.deleteResult(result)

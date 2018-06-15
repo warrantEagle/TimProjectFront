@@ -4,22 +4,15 @@
   <table class="table table-striped">
     <thead>
     <tr>
-      <th>kcal</th>
-      <th>length</th>
-      <th>time</th>
+      <th>Results id: </th>
       <th>loginPerson</th>
-      <th>date</th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let res of results">
-      <td>{{ res.kcal }}</td>
-      <td>{{ res.length }}</td>
-      <td>{{ res.time }}</td>
+    <tr *ngFor="let res of results" [routerLink]="['/detail', res.idResult]">
+      <td>{{ res.idResult }}</td>
       <td>{{ res.loginPerson }}</td>
-      <td>{{ res.date }}</td>
       <td><button class="btn btn-danger" (click)="delete(res)"> Delete result</button></td>
-      <td><button class="btn btn-danger" (click)="getResultsByPersonLogin(res)"> Get results</button></td>
     </tr>
     </tbody>
   </table>

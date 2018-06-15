@@ -28,13 +28,13 @@ export class PersonDetailsComponent   {
     this.submitted = true;
     this.dataService.update(this.person);
   }*/
-  /*ngOnInit(): void {
+  x(): void {
     this.route.params.pipe(
       switchMap(
         (params: Params) =>
           this.dataService.getPerson(+params['pesel'])
     )).subscribe(person => this.person = person);
-  }*/
+  }
 
   goBack(): void {
     this.location.back();

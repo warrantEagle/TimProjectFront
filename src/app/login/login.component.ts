@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from '../data.service';
-import {Router} from '@angular/router';
+import {Params, Router} from '@angular/router';
 import {LoginData} from '../loginData';
 import {Location} from '@angular/common';
 import {Person} from '../person';
+import {switchMap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
@@ -18,8 +19,7 @@ export class LoginComponent {
     this.dataService.check(this.loginData)
       .subscribe( data => {/*
         data =*/
-        this.router.navigate(['/home']);
+        this.router.navigate(['/home/' + this.loginData.login]);
         alert('Loged in successfully.');
       });
   }
-}

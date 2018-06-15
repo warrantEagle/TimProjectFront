@@ -31,7 +31,7 @@ export class DataService {
     return this.http.post<Person>(this.peopleUrl, person);
   }
 
-  getPerson(login: string) {
+  getPerson(login: number) {
     return this.http.get<Person>(this.peopleUrl + '/' + login);
   }
 
@@ -42,9 +42,14 @@ export class DataService {
   /**
    * W dalszej częsci pobieranie danych o rezultatach
    */
-  getResultsByPersonLogin(result: Result) {
-    return this.http.get<Result[]>(this.resultUrl + result.loginPerson);
+  getResultsByPersonLogin(login: string) {
+    return this.http.get<Result[]>(this.resultUrl + '/' + login);
   }
+  getResultByResultId(idResult: number) {
+
+    return this.http.get<Result>(this.resultUrl + '/res/' + idResult );
+  }
+
   deleteResult(result: Result) {
     return this.http.delete(this.resultUrl + '/deleteResult' + result);
   }

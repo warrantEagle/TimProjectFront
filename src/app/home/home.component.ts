@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import {switchMap} from 'rxjs/operators';
+import {ActivatedRoute, Params} from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,11 +9,15 @@ import { Location } from '@angular/common';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private location: Location) { }
+  login: string;
+  log: number;
+  constructor(private location: Location, private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
-  }
-  goBack(): void {
-    this.location.back();
+    this.route.params.subscribe(params => {
+      this.login = params['personLogin'];
+    });
+    alert('login : ' + this.login);
   }
 }

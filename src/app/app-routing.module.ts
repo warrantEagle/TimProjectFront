@@ -7,16 +7,18 @@ import {ResultsComponent} from './results/results.component';
 import {CreateResultComponent} from './create-result/create-result.component';
 import {LoginComponent} from './login/login.component';
 import {HomeComponent} from './home/home.component';
+import {ResultDetailsComponent} from './result-details/result-details.component';
 
 
 
 
 const routes: Routes = [
   { path: 'people',  component: PeopleComponent },
-  { path: 'results',  component: ResultsComponent },
+  { path: 'results/:personLogin',  component: ResultsComponent },
   { path: 'add', component: CreatePersonComponent },
   { path: 'addRes', component: CreateResultComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'detail/:idResult', component: ResultDetailsComponent },
+  { path: 'home/:personLogin', component: HomeComponent },
   { path: '', component: LoginComponent }
 
 ];
