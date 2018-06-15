@@ -3,6 +3,8 @@ import {Result} from './result';
 import {Person} from './person';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {LoginData} from './loginData';
+import {Point} from './point';
+import {forEach} from '@angular/router/src/utils/collection';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json', 'No-Auth': 'True'})
@@ -43,13 +45,19 @@ export class DataService {
     return this.http.delete(this.resultUrl + '/' + result);
   }
   createResult(result: Result )  {
-    return this.http.post<Result>(this.resultUrl, result);
+    return this.http.post<Result>(this.resultUrl + '/createResult', result);
   }
 
   /**
    * logowanie
    */
   check(loginData: LoginData) {
-    return this.http.get<Person>(this.peopleUrl + '/login/' + loginData.login + '/' + loginData.password );
+    return this.http.get<LoginData>(this.peopleUrl + '/login/' + loginData.login + '/' + loginData.password );
+  }
+
+  createPoints(points: Point[]) {
+
+    alert('Length: !' + points.length);
+    return this.http.post<Point[]>(this.resultUrl + '/createPoints', points);
   }
 }
