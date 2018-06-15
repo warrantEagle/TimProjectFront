@@ -38,11 +38,11 @@ export class DataService {
   /**
    * W dalszej częsci pobieranie danych o rezultatach
    */
-  getResults() {
-    return this.http.get<Result[]>(this.resultUrl);
+  getResultsByPersonLogin(result: Result) {
+    return this.http.get<Result[]>(this.resultUrl + result.loginPerson);
   }
   deleteResult(result: Result) {
-    return this.http.delete(this.resultUrl + '/' + result);
+    return this.http.delete(this.resultUrl + '/deleteResult' + result);
   }
   createResult(result: Result )  {
     return this.http.post<Result>(this.resultUrl + '/createResult', result);
