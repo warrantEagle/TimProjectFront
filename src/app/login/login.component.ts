@@ -14,7 +14,7 @@ export class LoginComponent {
   loginData: LoginData = new LoginData();
   constructor(private router: Router, private dataService: DataService, private location: Location) { }
 
-  check() : any {
+  check(){
     this.dataService.check(this.loginData)
       .subscribe( data => {/*
         data =*/

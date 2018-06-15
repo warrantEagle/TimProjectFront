@@ -14,14 +14,14 @@ export class ResultsComponent implements OnInit {
   results: Result[];
   constructor(private router: Router, private dataService: DataService) { }
 
-  getResults() {
-    return this.dataService.getResults().subscribe( data => {
+  getResultsByPersonLogin(result: Result) {
+    return this.dataService.getResultsByPersonLogin(result).subscribe( data => {
       this.results = data;
     });
   }
 
   ngOnInit() {
-    this.getResults();
+    //this.getResultsByPersonLogin(result: Result);
   }
 
   delete(result: Result): void {
