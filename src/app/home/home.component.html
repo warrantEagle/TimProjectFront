@@ -2,9 +2,12 @@
 <div class="container-fluid">
   <div class="col-md-offset-1">
     <h1>
-      Welcome to !
+
+      Let's start !
     </h1>
   </div >
+  <td><button class="btn btn-danger" [routerLink]="['']"> Log out</button></td>
+  <td><button class="btn btn-danger" [routerLink]="['/profDet/', login]"> Your profile</button></td>
   <a *ngIf="login" style="margin-left:10px" [routerLink]="['/results/', login]"> List Results</a>
   <a style="margin-left:10px" routerLink="/addRes">Add Result</a>
 

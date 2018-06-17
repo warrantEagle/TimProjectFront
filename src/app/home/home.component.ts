@@ -10,7 +10,6 @@ import {ActivatedRoute, Params} from '@angular/router';
 export class HomeComponent implements OnInit {
 
   login: string;
-  log: number;
   constructor(private location: Location, private route: ActivatedRoute) {
   }
 
@@ -18,6 +17,5 @@ export class HomeComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.login = params['personLogin'];
     });
-    alert('login : ' + this.login);
   }
 }

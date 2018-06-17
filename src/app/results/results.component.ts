@@ -31,7 +31,7 @@ export class ResultsComponent implements OnInit {
 
 
   delete(result: Result): void {
-    this.dataService.deleteResult(result)
+    this.dataService.deleteResult(result.idResult)
       .subscribe( data => {
         this.results = this.results.filter(u => u !== result);
       });

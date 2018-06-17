@@ -13,13 +13,17 @@ import {switchMap} from 'rxjs/operators';
 })
 export class LoginComponent {
   loginData: LoginData = new LoginData();
-  constructor(private router: Router, private dataService: DataService, private location: Location) { }
 
-  check(){
-    this.dataService.check(this.loginData)
-      .subscribe( data => {/*
+  constructor(private router: Router, private dataService: DataService, private location: Location) {
+  }
+
+  check() {
+  this.dataService.check(this.loginData)
+      .subscribe(data => {/*
         data =*/
         this.router.navigate(['/home/' + this.loginData.login]);
         alert('Loged in successfully.');
       });
+
   }
+}

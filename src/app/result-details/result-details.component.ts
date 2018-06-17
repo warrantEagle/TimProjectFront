@@ -25,5 +25,7 @@ export class ResultDetailsComponent implements OnInit {
           this.dataService.getResultByResultId(+params['idResult'])
       )).subscribe(result => this.result = result);
   }
-
+  goBack(): void {
+    this.location.back();
+  }
 }

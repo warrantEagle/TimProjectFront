@@ -12,7 +12,7 @@ import { switchMap } from 'rxjs/operators';
   templateUrl: './person-details.component.html',
   styleUrls: ['./person-details.component.css']
 })
-export class PersonDetailsComponent   {
+export class PersonDetailsComponent  implements OnInit  {
 
   person: Person;
   submitted = false;
@@ -21,18 +21,13 @@ export class PersonDetailsComponent   {
     private route: ActivatedRoute,
     private location: Location
   ) {}
-  delete(): void {
-    this.dataService.delete(this.person.login);
-  }/*
-  onSubmit(): void {
-    this.submitted = true;
-    this.dataService.update(this.person);
-  }*/
-  x(): void {
+
+  ngOnInit() {
+
     this.route.params.pipe(
       switchMap(
         (params: Params) =>
-          this.dataService.getPerson(+params['pesel'])
+          this.dataService.getPerson(params['personLogin'])
     )).subscribe(person => this.person = person);
   }
 

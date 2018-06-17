@@ -28,11 +28,14 @@ export class DataService {
   }
 
   create(person: Person) {
+
+
     return this.http.post<Person>(this.peopleUrl, person);
   }
 
-  getPerson(login: number) {
-    return this.http.get<Person>(this.peopleUrl + '/' + login);
+  getPerson(login: string) {
+    alert('Person get: !');
+    return this.http.get<Person>(this.peopleUrl + '/login/' + login + '/' + login );
   }
 
   delete(login: string) {
@@ -50,8 +53,8 @@ export class DataService {
     return this.http.get<Result>(this.resultUrl + '/res/' + idResult );
   }
 
-  deleteResult(result: Result) {
-    return this.http.delete(this.resultUrl + '/deleteResult' + result);
+  deleteResult(result: number) {
+    return this.http.delete(this.resultUrl + '/deleteResult/' + result);
   }
   createResult(result: Result )  {
     return this.http.post<Result>(this.resultUrl + '/createResult', result);
