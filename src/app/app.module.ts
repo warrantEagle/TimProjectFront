@@ -14,6 +14,9 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { AgmCoreModule } from '@agm/core';
+import { ResultDetailsComponent } from './result-details/result-details.component';
+import { RegisterComponent } from './register/register.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +28,9 @@ import { AgmCoreModule } from '@agm/core';
     CreateResultComponent,
     LoginComponent,
     HomeComponent,
-    AdminPageComponent
+    AdminPageComponent,
+    ResultDetailsComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

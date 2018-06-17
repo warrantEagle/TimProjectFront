@@ -8,6 +8,7 @@
   <input type="text"[(ngModel)]="loginData.login" placeholder="login" name="login" id="login"><br>
   <input type="password" [(ngModel)]="loginData.password" placeholder="password" name="password" id="password"><br>
   <input type="button" (click)="check()" value="Login">
+  <input type="button"[routerLink]="['/register']"value="Register">
 </div>
 </div>
 <!--<div class="col-md-6">

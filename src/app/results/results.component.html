@@ -1,25 +1,20 @@
 <div class="col-md-6">
-  <h2> Results Details</h2>
-
+  <h2> Results</h2>
+  <td><button class="btn btn-danger" [routerLink]="['/home/', login]"> Home page</button></td>
+  <td><button class="btn btn-danger" [routerLink]="['']"> Log out</button></td>
   <table class="table table-striped">
     <thead>
     <tr>
-      <th>kcal</th>
-      <th>length</th>
-      <th>time</th>
+      <th>Results id: </th>
       <th>loginPerson</th>
-      <th>date</th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let res of results">
-      <td>{{ res.kcal }}</td>
-      <td>{{ res.length }}</td>
-      <td>{{ res.time }}</td>
+    <tr *ngFor="let res of results" >
+      <td>{{ res.idResult }}</td>
       <td>{{ res.loginPerson }}</td>
-      <td>{{ res.date }}</td>
       <td><button class="btn btn-danger" (click)="delete(res)"> Delete result</button></td>
-      <td><button class="btn btn-danger" (click)="getResultsByPersonLogin(res)"> Get results</button></td>
+      <td><button class="btn btn-danger" [routerLink]="['/detail', res.idResult]"> Get details</button></td>
     </tr>
     </tbody>
 
