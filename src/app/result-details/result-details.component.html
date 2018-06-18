@@ -1,5 +1,7 @@
-<div *ngIf="result">
-  <td><button class="btn btn-danger" [routerLink]="['']"> Log out</button></td>
+<div *ngIf="result" class="col-md-6">
+  <td>
+    <button class="btn btn-danger" [routerLink]="['']"> Log out</button>
+  </td>
   <button class="btn btn-success" (click)="goBack()">Back</button>
   <h4>{{result.idResult}} details!</h4>
   <div>
@@ -15,6 +17,34 @@
     <label>Kcal: </label>{{result.kcal}}
   </div>
   <div>
-    <label>Date: </label>{{result.date}}
+    <label>Date: </label>{{ convert(result.date)}}
   </div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Points:</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let p of points">
+      <td>{{ p.longitude }}</td>
+      <td>{{ p.latitude }}</td>
+    </tr>
+    </tbody>
+
+  </table>
 </div>
+<div class="col-md-6">
+  <agm-map [latitude]="lat"
+           [longitude]="lng"
+           [zoom]="zoom">
+    <agm-polyline >
+      <agm-polyline-point *ngFor="let p of points"
+        [latitude]="p.latitude"
+        [longitude]="p.longitude">
+      </agm-polyline-point>
+
+    </agm-polyline>
+  </agm-map>
+</div>
+

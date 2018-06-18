@@ -11,9 +11,6 @@ import {switchMap} from 'rxjs/operators';
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
-  zoom = 13;
-  lat = 52.249676;
-  lng = 20.882229;
   login: string;
   results: Result[];
   constructor(private router: Router, private route: ActivatedRoute, private dataService: DataService) { }

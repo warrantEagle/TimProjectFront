@@ -8,5 +8,5 @@ export class Result {
   public length: number;
   public kcal: number;
   public time: number;
-  public date: Date;
+  public date: number;
 }

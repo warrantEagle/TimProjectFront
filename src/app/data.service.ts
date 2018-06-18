@@ -68,4 +68,8 @@ export class DataService {
     alert('Length: !' + points.length);
     return this.http.post<Point[]>(this.resultUrl + '/createPoints', points);
   }
+  getPointsByResultId(idResult: number) {
+
+    return this.http.get<Point[]>(this.resultUrl + '/points/' + idResult );
+  }
 }
