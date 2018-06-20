@@ -16,7 +16,13 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
 import { AgmCoreModule } from '@agm/core';
 import { ResultDetailsComponent } from './result-details/result-details.component';
 import { RegisterComponent } from './register/register.component';
+import { ChartsComponent } from './charts/charts.component';
+import {FusionChartsModule} from 'angular4-fusioncharts';
+import * as FusionCharts from 'fusioncharts';
+import * as Charts from 'fusioncharts/fusioncharts.charts';
+import * as FintTheme from 'fusioncharts/themes/fusioncharts.theme.fint';
 
+FusionChartsModule.fcRoot(FusionCharts, Charts, FintTheme)
 
 @NgModule({
   declarations: [
@@ -30,10 +36,12 @@ import { RegisterComponent } from './register/register.component';
     HomeComponent,
     AdminPageComponent,
     ResultDetailsComponent,
-    RegisterComponent
+    RegisterComponent,
+    ChartsComponent
   ],
   imports: [
     BrowserModule,
+    FusionChartsModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,

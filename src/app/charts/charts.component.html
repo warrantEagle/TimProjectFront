@@ -1,0 +1,30 @@
+<div class="col-md-6">
+  <h1> Statistics: </h1>
+
+<td>
+  <button class="btn btn-danger" [routerLink]="['']"> Log out</button>
+</td>
+<button class="btn btn-success" (click)="goBack()">Back</button>
+<fusioncharts
+  [width]="width"
+  [height]="height"
+  [type]="type"
+  [dataFormat]="dataFormat"
+  [dataSource]="dataSource"
+></fusioncharts>
+
+<fusioncharts
+  [width]="width"
+  [height]="height"
+  [type]="type"
+  [dataFormat]="dataFormat"
+  [dataSource]="dataSource2"
+></fusioncharts>
+<fusioncharts
+  [width]="width"
+  [height]="height"
+  [type]="type"
+  [dataFormat]="dataFormat"
+  [dataSource]="dataSource3"
+></fusioncharts>
+</div>

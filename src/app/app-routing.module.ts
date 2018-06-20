@@ -9,6 +9,7 @@ import {LoginComponent} from './login/login.component';
 import {HomeComponent} from './home/home.component';
 import {ResultDetailsComponent} from './result-details/result-details.component';
 import {RegisterComponent} from './register/register.component';
+import {ChartsComponent} from './charts/charts.component';
 
 
 
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'detail/:idResult', component: ResultDetailsComponent },
   { path: 'home/:personLogin', component: HomeComponent },
+  { path: 'charts/:personLogin', component: ChartsComponent },
   { path: '', component: LoginComponent }
 
 ];
