@@ -1,24 +1,28 @@
-<div class="col-md-6">
-  <h2> Results</h2>
-  <td><button class="btn btn-danger" [routerLink]="['/home/', login]"> Home page</button></td>
-  <td><button class="btn btn-danger" [routerLink]="['']"> Log out</button></td>
-  <table class="table table-striped">
-    <thead>
-    <tr>
-      <th>Results id: </th>
-      <th>loginPerson</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let res of results" >
-      <td>{{ res.idResult }}</td>
-      <td>{{ res.loginPerson }}</td>
-      <td><button class="btn btn-danger" (click)="delete(res)"> Delete result</button></td>
-      <td><button class="btn btn-danger" [routerLink]="['/detail', res.idResult]"> Get details</button></td>
-    </tr>
-    </tbody>
+<div class="body"></div>
+<div class="grad"></div>
+<div class="header">
+  <div class="header">
+    <div class="col-md-6">
+      <h2> Results</h2>
+      <td><button class="btn btn-success" [routerLink]="['/home/', login]"> Home page</button></td>
+      <td><button class="btn btn-success" [routerLink]="['']"> Log out</button></td>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Results id: </th>
+          <th>loginPerson</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let res of results" >
+          <td>{{ res.idResult }}</td>
+          <td>{{ res.loginPerson }}</td>
+          <td><button class="btn btn-danger" (click)="delete(res)"> Delete result</button></td>
+          <td><button class="btn btn-danger" [routerLink]="['/detail', res.idResult]"> Get details</button></td>
+        </tr>
+        </tbody>
 
-  </table>
+      </table>
 
-</div>
-
+    </div>
+  </div>

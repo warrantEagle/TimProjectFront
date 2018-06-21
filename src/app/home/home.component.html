@@ -1,17 +1,21 @@
+<div class="body"></div>
+<div class="grad"></div>
+<div class="header">
+  <div class="header">
+    <br class="container-fluid">
+      <div class="col-md-offset-1">
+        <h1>
 
-<div class="container-fluid">
-  <div class="col-md-offset-1">
-    <h1>
+          Let's start !
+        </h1>
+      </div >
+      <td><button class="btn btn-danger" [routerLink]="['']"> Log out</button></td>
+      <td><button class="btn btn-danger" [routerLink]="['/profDet/', login]"> Your profile</button></td>
+      <td><button class="btn btn-danger" [routerLink]="['/charts/', login]"> Your statistics</button></td>
+      <a *ngIf="login" style="margin-left:10px" [routerLink]="['/results/', login]"> List Results </a>
+      <br>
+      <a style="margin-left:10px" routerLink="/addRes"> Add Result </a>
 
-      Let's start !
-    </h1>
-  </div >
-  <td><button class="btn btn-danger" [routerLink]="['']"> Log out</button></td>
-  <td><button class="btn btn-danger" [routerLink]="['/profDet/', login]"> Your profile</button></td>
-  <td><button class="btn btn-danger" [routerLink]="['/charts/', login]"> Your statistics</button></td>
-  <a *ngIf="login" style="margin-left:10px" [routerLink]="['/results/', login]"> List Results</a>
-  <a style="margin-left:10px" routerLink="/addRes">Add Result</a>
-
-  <br/>
-</div>
-
+      <br/>
+    </div>
+  </div>

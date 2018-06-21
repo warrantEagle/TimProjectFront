@@ -1,23 +1,31 @@
-<div *ngIf="person">
-  <td><button class="btn btn-danger" [routerLink]="['']"> Log out</button></td>
-  <button class="btn btn-success" (click)="goBack()">Back</button>
-  <h4>{{person.name}} details!</h4>
-  <div>
-    <label>Surname: </label>{{person.surname}}
-  </div>
-  <div>
-    <label>Login: </label>{{person.login}}
-  </div>
-  <div>
-    <label>Sex: </label>{{person.sex}}
-  </div>
-  <div>
-    <label>Age: </label>{{person.age}}
-  </div>
-  <div>
-    <label>Height: </label>{{person.height}}
-  </div>
-  <div>
-    <label>Weight: </label>{{person.weight}}
+<div class="body"></div>
+<div class="grad"></div>
+<div class="header">
+  <div class="header">
+    <div *ngIf="person">
+      <button class="btn btn-danger" [routerLink]="['']"> Log out</button>
+      <button class="btn btn-success" (click)="goBack()">Back</button>
+      <div>
+        <label>Name: </label>{{person.name}}
+      </div>
+      <div>
+        <label>Surname: </label>{{person.surname}}
+      </div>
+      <div>
+        <label>Login: </label>{{person.login}}
+      </div>
+      <div>
+        <label>Sex: </label>{{person.sex}}
+      </div>
+      <div>
+        <label>Age: </label>{{person.age}}
+      </div>
+      <div>
+        <label>Height: </label>{{person.height}}
+      </div>
+      <div>
+        <label>Weight: </label>{{person.weight}}
+      </div>
+    </div>
   </div>
 </div>
