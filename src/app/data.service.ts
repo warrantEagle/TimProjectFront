@@ -30,7 +30,7 @@ export class DataService {
   }
 
   getPerson(login: string) {
-    alert('Person get: !');
+   // alert('Person get: !');
     return this.http.get<Person>(this.peopleUrl + '/login/' + login + '/' + login );
   }
 
@@ -65,7 +65,6 @@ export class DataService {
 
   createPoints(points: Point[]) {
 
-    alert('Length: !' + points.length);
     return this.http.post<Point[]>(this.resultUrl + '/createPoints', points);
   }
   getPointsByResultId(idResult: number) {
