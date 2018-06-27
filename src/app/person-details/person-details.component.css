@@ -15,8 +15,8 @@ body{
   position: absolute;
   top: -20px;
   left: -20px;
-  right: -40px;
-  bottom: -40px;
+  right: 0px;
+  bottom: 0px;
   width: auto;
   height: auto;
   background-image: url(https://dodnn.work/Portals/0/images/members/29ad49c6-9920-422d-b270-ac875062bd01_Member%20.jpg.jpg);
@@ -26,11 +26,11 @@ body{
 }
 
 .grad{
-  position: absolute;
+  position: center;
   top: -20px;
   left: -20px;
-  right: -40px;
-  bottom: -40px;
+  right: 0px;
+  bottom: 0px;
   width: auto;
   height: auto;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
@@ -39,7 +39,7 @@ body{
 }
 
 .header{
-  position: absolute;
+  position: center;
   top: calc(50% - 35px);
   left: calc(50% - 255px);
   z-index: 2;

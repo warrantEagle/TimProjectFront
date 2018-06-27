@@ -15,8 +15,8 @@ body{
   position: absolute;
   top: -20px;
   left: -20px;
-  right: -40px;
-  bottom: -40px;
+  right: 0px;
+  bottom: 0px;
   width: auto;
   height: auto;
   background-image: url(http://cdn2.coachmag.co.uk/sites/coachmag/files/styles/16x9_746/public/mf-178118.jpg?itok=V6JhLOUC&timestamp=1386767177);
@@ -29,8 +29,8 @@ body{
   position: absolute;
   top: -20px;
   left: -20px;
-  right: -40px;
-  bottom: -40px;
+  right: 0px;
+  bottom: 0px;
   width: auto;
   height: auto;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */

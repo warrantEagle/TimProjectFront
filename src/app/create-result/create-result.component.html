@@ -11,7 +11,6 @@
           <label for="kcal"> Kcal:</label>
           <input [(ngModel)]="result.kcal" placeholder="Kcal" name="kcal" class="form-control" id="kcal">
         </div>
-        <br>
         <div class="form-group">
           <label for="length">Length:</label>
           <input [(ngModel)]="result.length" placeholder="Length" name="length" class="form-control" id="length">
@@ -20,13 +19,13 @@
         <label for="time">Time:</label>
         <input [(ngModel)]="result.time" placeholder="Time" name="time" class="form-control" id="time">
         </div>
-        <div class="form-group">
+       <!-- <div class="form-group">
           <label for="loginPerson">LoginPerson:</label>
           <input type="loginPerson" [(ngModel)]="result.loginPerson" placeholder="LoginPerson" name="loginPerson" class="form-control" id="loginPerson">
-        </div>
+        </div>-->
         <div class="form-group">
           <label for="date">Date:</label>
-          <input [(ngModel)]="result.date" placeholder="Date" name="date" class="form-control" id="date">
+          <input type="Date" [(ngModel)]="dataTime" placeholder="Date" name="date" class="form-control" id="date">
         </div>
 
         <button class="btn btn-success" (click)="create()">Create</button>

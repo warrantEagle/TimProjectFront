@@ -15,8 +15,8 @@ body{
   position: absolute;
   top: -20px;
   left: -20px;
-  right: -40px;
-  bottom: -40px;
+  right: 0px;
+  bottom: 0px;
   width: auto;
   height: auto;
   background-image: url(https://www.hellomagazine.com/imagenes//healthandbeauty/health-and-fitness/201204207800/marathon-running-tips/0-36-811/running-4--z.jpg);
@@ -28,8 +28,8 @@ body{
   position: center;
   top: -20px;
   left: -20px;
-  right: -40px;
-  bottom: -40px;
+  right: 0px;
+  bottom: 0px;
   width: auto;
   height: auto;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */

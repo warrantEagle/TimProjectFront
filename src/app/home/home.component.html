@@ -14,7 +14,7 @@
       <td><button class="btn btn-danger" [routerLink]="['/charts/', login]"> Your statistics</button></td>
       <a *ngIf="login" style="margin-left:10px" [routerLink]="['/results/', login]"> List Results </a>
       <br>
-      <a style="margin-left:10px" routerLink="/addRes"> Add Result </a>
+      <a style="margin-left:10px" [routerLink]="['/addRes/', login]"> Add Result </a>
 
       <br/>
     </div>

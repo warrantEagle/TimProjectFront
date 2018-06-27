@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'results/:personLogin',  component: ResultsComponent },
   { path: 'profDet/:personLogin',  component: PersonDetailsComponent },
   { path: 'add', component: CreatePersonComponent },
-  { path: 'addRes', component: CreateResultComponent },
+  { path: 'addRes/:personLogin', component: CreateResultComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'detail/:idResult', component: ResultDetailsComponent },
   { path: 'home/:personLogin', component: HomeComponent },
