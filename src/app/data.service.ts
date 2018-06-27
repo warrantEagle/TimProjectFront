@@ -26,7 +26,7 @@ export class DataService {
   create(person: Person) {
 
 
-    return this.http.post<Person>(this.peopleUrl, person);
+    return this.http.post<Person>(this.peopleUrl+ '/create', person);
   }
 
   getPerson(login: string) {

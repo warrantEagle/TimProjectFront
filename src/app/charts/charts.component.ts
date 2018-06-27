@@ -42,7 +42,7 @@ export class ChartsComponent implements OnInit {
       }
       const item2 = new Array();
       for (let i = 0; i < this.results.length; i++) {
-        const p = new ChartItem(new Date(this.results[i].date).toString(), this.results[i].length.toString());
+        const p = new ChartItem(new Date(this.results[i].date).toString(), this.results[i].dist.toString());
         item2.push(p);
       }
       const item3 = new Array();
