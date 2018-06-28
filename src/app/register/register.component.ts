@@ -17,12 +17,18 @@ export class RegisterComponent  {
               private location: Location) { }
 
   create(): void {
-    this.dataService.create(this.person)
-      .subscribe( data => {
-        alert('Account created  successfully.');
-        this.router.navigate(['/home/' + this.person.login]);
 
-      });
+    if ((new String(this.person.login).valueOf()) !== new String('undefined').valueOf()
+      && (new String(this.person.password).valueOf()) !== new String('undefined').valueOf()) {
+      this.dataService.create(this.person)
+        .subscribe(data => {
+          alert('Account created  successfully.');
+          this.router.navigate(['/home/' + this.person.login]);
+
+        });
+    } else {
+      alert('Complete field!');
+    }
 
   }
 
