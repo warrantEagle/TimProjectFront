@@ -5,7 +5,6 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {LoginData} from './loginData';
 import {Point} from './point';
 import {forEach} from '@angular/router/src/utils/collection';
-
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json', 'No-Auth': 'True'})
 };

@@ -29,27 +29,30 @@ export class ChartsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
     this.route.params.pipe(
       switchMap(
         (params: Params) =>
           this.dataService.getResultsByPersonLogin(params['personLogin'])
       )).subscribe(result => {
       this.results = result;
+      alert('dw '+ this.results[1].length);
+      const item2 = new Array();
       const item = new Array();
       for (let i = 0; i < this.results.length; i++) {
         const p = new ChartItem(new Date(this.results[i].date).toString(), this.results[i].kcal.toString());
         item.push(p);
       }
-      const item2 = new Array();
-      for (let i = 0; i < this.results.length; i++) {
-        const p = new ChartItem(new Date(this.results[i].date).toString(), this.results[i].dist.toString());
-        item2.push(p);
-      }
-      const item3 = new Array();
-      for (let i = 0; i < this.results.length; i++) {
-        const p = new ChartItem(new Date(this.results[i].date).toString(), this.results[i].time.toString());
-        item3.push(p);
-      }
+
+            for (let i = 0; i < this.results.length; i++) {
+              const d = new ChartItem(new Date(this.results[i].date).toString(), this.results[i].length.toString());
+              item2.push(d);
+            }
+            const item3 = new Array();
+            for (let i = 0; i < this.results.length; i++) {
+              const p = new ChartItem(new Date(this.results[i].date).toString(), this.results[i].time.toString());
+              item3.push(p);
+            }
       this.dataSource = {
         'chart': {
           'caption': 'Kcal',

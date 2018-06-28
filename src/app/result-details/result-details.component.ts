@@ -4,7 +4,7 @@ import {ActivatedRoute, Params} from '@angular/router';
 import { Location } from '@angular/common';
 import { switchMap } from 'rxjs/operators';
 import {Result} from '../result';
-import {Point} from "../point";
+import {Point} from '../point';
 
 @Component({
   selector: 'app-result-details',
@@ -27,7 +27,7 @@ export class ResultDetailsComponent implements OnInit {
       switchMap(
         (params: Params) =>
           this.dataService.getResultByResultId(+params['idResult'])
-      )).subscribe(result => this.result = result);
+      )).subscribe(result =>  this.result = result );
 
     this.route.params.pipe(
       switchMap(
@@ -40,8 +40,8 @@ export class ResultDetailsComponent implements OnInit {
     this.location.back();
   }
   convert(resultDate) {
-    let date = new Date(resultDate);
-    this.time= date.toString();
+    const date = new Date(resultDate);
+    this.time = date.toString();
     return this.time;
   }
 

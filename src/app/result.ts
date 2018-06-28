@@ -5,7 +5,7 @@ export class Result {
   constructor() {  }
   public idResult: number;
   public loginPerson: string;
-  public dist: number;
+  public length: number;
   public pace: number;
   public kcal: number;
   public time: number;

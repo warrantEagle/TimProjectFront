@@ -3,6 +3,6 @@ export class ChartItem {
     this.label = label;
     this.value = value;
   }
-  label: string;
-  value: string;
+  public label: string;
+  public value: string;
 }
